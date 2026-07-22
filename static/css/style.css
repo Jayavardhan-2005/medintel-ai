@@ -1,39 +1,73 @@
+/* -------------------- */
+/* Global Reset */
+/* -------------------- */
+
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
 }
+
+/* -------------------- */
+/* Body */
+/* -------------------- */
 
 body{
 
     font-family:Arial, sans-serif;
+
     background:#F8FAFC;
-    
+
 }
+
+/* -------------------- */
+/* Navbar */
+/* -------------------- */
 
 .navbar{
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     padding:20px 8%;
+
     background:white;
+
     box-shadow:0 4px 12px rgba(0,0,0,.08);
 
 }
 
+/* -------------------- */
+/* Logo */
+/* -------------------- */
+
 .logo{
 
     font-size:28px;
+
     font-weight:bold;
+
     color:#2563EB;
 
 }
 
+/* -------------------- */
+/* Navigation Links */
+/* -------------------- */
+
 .nav-links{
 
     display:flex;
+
     list-style:none;
+
     gap:40px;
 
 }
@@ -41,8 +75,11 @@ body{
 .nav-links a{
 
     text-decoration:none;
+
     color:#334155;
+
     font-weight:600;
+
     transition:.3s;
 
 }
@@ -50,82 +87,29 @@ body{
 .nav-links a:hover{
 
     color:#2563EB;
-}
-
-.hero{
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    height:80vh;
-    padding:0 10%;
 
 }
 
-.hero-left p{
-
-    font-size:20px;
-    color:#64748B;
-    line-height:1.8;
-    margin-bottom:40px;
-
-}
-
-.hero-left h1{
-
-    font-size:56px;
-    line-height:1.2;
-    color:#0F172A;
-    margin-bottom:24px;
-
-}
-
-.hero-content h1{
-
-    font-size:56px;
-    color:#0F172A;
-    margin-bottom:20px;
-
-}
-
-.hero-content p{
-
-    font-size:20px;
-    color:#64748B;
-    line-height:1.7;
-    margin-bottom:35px;
-
-}
-
-#upload-btn{
-
-    background:#2563EB;
-    color:white;
-    border:none;
-    padding:18px 40px;
-    font-size:18px;
-    border-radius:12px;
-    cursor:pointer;
-    transition:.3s;
-
-}
-
-#upload-btn:hover{
-
-    background:#1D4ED8;
-
-}
+/* -------------------- */
+/* Navbar Button */
+/* -------------------- */
 
 .nav-btn{
 
     background:#2563EB;
+
     color:white;
+
     border:none;
+
     padding:12px 24px;
+
     border-radius:8px;
+
     cursor:pointer;
+
     font-weight:bold;
+
     transition:.3s;
 
 }
@@ -136,16 +120,96 @@ body{
 
 }
 
+/* -------------------- */
+/* Hero Section */
+/* -------------------- */
+
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:80px 8%;
+
+    min-height:90vh;
+
+}
+
+/* -------------------- */
+/* Hero Left */
+/* -------------------- */
+
+.hero-left{
+
+    flex:1;
+
+    max-width:600px;
+
+}
+
+.hero-left h1{
+
+    font-size:56px;
+
+    line-height:1.15;
+
+    color:#0F172A;
+
+    margin-bottom:24px;
+
+    font-weight:800;
+
+}
+
+.hero-left p{
+
+    font-size:20px;
+
+    color:#64748B;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* -------------------- */
+/* Hero Buttons */
+/* -------------------- */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+/* -------------------- */
+/* Primary Button */
+/* -------------------- */
+
 .primary-btn{
 
     background:#2563EB;
+
     color:white;
+
     border:none;
+
     padding:16px 32px;
+
     border-radius:10px;
+
     font-size:18px;
+
     font-weight:600;
+
     cursor:pointer;
+
     transition:.3s;
 
 }
@@ -153,5 +217,61 @@ body{
 .primary-btn:hover{
 
     background:#1D4ED8;
+
+}
+
+/* -------------------- */
+/* Secondary Button */
+/* -------------------- */
+
+.secondary-btn{
+
+    background:white;
+
+    color:#2563EB;
+
+    border:2px solid #2563EB;
+
+    padding:16px 32px;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#EFF6FF;
+
+}
+
+/* -------------------- */
+/* Hero Right */
+/* -------------------- */
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-right img{
+
+    width:100%;
+
+    max-width:500px;
 
 }
