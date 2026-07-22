@@ -8,7 +8,9 @@
 
     <title>MedIntel AI</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </head>
 
@@ -81,6 +83,50 @@
             </div>
 
         </section>
+        <section class="features">
+
+    <h2>Why Choose MedIntel AI?</h2>
+
+    <p>
+        Understand your medical reports with AI-powered explanations,
+        health tracking, and complete privacy.
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <h3>🧠 AI Analysis</h3>
+
+            <p>
+                Instantly understand medical reports in simple language.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>📊 Health Tracking</h3>
+
+            <p>
+                Compare reports over time and monitor your progress.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>🔒 Privacy First</h3>
+
+            <p>
+                Your medical reports stay secure and confidential.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
     </main>
 

@@ -1,7 +1,3 @@
-/* -------------------- */
-/* Global Reset */
-/* -------------------- */
-
 *{
 
     margin:0;
@@ -12,10 +8,6 @@
 
 }
 
-/* -------------------- */
-/* Body */
-/* -------------------- */
-
 body{
 
     font-family:Arial, sans-serif;
@@ -23,10 +15,6 @@ body{
     background:#F8FAFC;
 
 }
-
-/* -------------------- */
-/* Navbar */
-/* -------------------- */
 
 .navbar{
 
@@ -44,10 +32,6 @@ body{
 
 }
 
-/* -------------------- */
-/* Logo */
-/* -------------------- */
-
 .logo{
 
     font-size:28px;
@@ -57,10 +41,6 @@ body{
     color:#2563EB;
 
 }
-
-/* -------------------- */
-/* Navigation Links */
-/* -------------------- */
 
 .nav-links{
 
@@ -90,10 +70,6 @@ body{
 
 }
 
-/* -------------------- */
-/* Navbar Button */
-/* -------------------- */
-
 .nav-btn{
 
     background:#2563EB;
@@ -120,10 +96,6 @@ body{
 
 }
 
-/* -------------------- */
-/* Hero Section */
-/* -------------------- */
-
 .hero{
 
     display:flex;
@@ -132,21 +104,18 @@ body{
 
     align-items:center;
 
-    padding:80px 8%;
+    padding:100px 10%;
 
     min-height:90vh;
 
 }
 
-/* -------------------- */
-/* Hero Left */
-/* -------------------- */
 
 .hero-left{
 
     flex:1;
 
-    max-width:600px;
+    max-width:650px;
 
 }
 
@@ -176,10 +145,6 @@ body{
 
 }
 
-/* -------------------- */
-/* Hero Buttons */
-/* -------------------- */
-
 .hero-buttons{
 
     display:flex;
@@ -187,10 +152,6 @@ body{
     gap:20px;
 
 }
-
-/* -------------------- */
-/* Primary Button */
-/* -------------------- */
 
 .primary-btn{
 
@@ -220,10 +181,6 @@ body{
 
 }
 
-/* -------------------- */
-/* Secondary Button */
-/* -------------------- */
-
 .secondary-btn{
 
     background:white;
@@ -252,10 +209,6 @@ body{
 
 }
 
-/* -------------------- */
-/* Hero Right */
-/* -------------------- */
-
 .hero-right{
 
     flex:1;
@@ -275,3 +228,46 @@ body{
     max-width:500px;
 
 }
+
+.features{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.feature-card{
+
+    background:white;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
