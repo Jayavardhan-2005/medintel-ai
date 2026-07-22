@@ -50,7 +50,6 @@ body{
 .nav-links a:hover{
 
     color:#2563EB;
-
 }
 
 .hero{
@@ -61,6 +60,24 @@ body{
     text-align:center;
     height:80vh;
     padding:0 10%;
+
+}
+
+.hero-left p{
+
+    font-size:20px;
+    color:#64748B;
+    line-height:1.8;
+    margin-bottom:40px;
+
+}
+
+.hero-left h1{
+
+    font-size:56px;
+    line-height:1.2;
+    color:#0F172A;
+    margin-bottom:24px;
 
 }
 
@@ -103,24 +120,37 @@ body{
 .nav-btn{
 
     background:#2563EB;
-
     color:white;
-
     border:none;
-
     padding:12px 24px;
-
     border-radius:8px;
-
     cursor:pointer;
-
     font-weight:bold;
-
     transition:.3s;
 
 }
 
 .nav-btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+.primary-btn{
+
+    background:#2563EB;
+    color:white;
+    border:none;
+    padding:16px 32px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
 
     background:#1D4ED8;
 
