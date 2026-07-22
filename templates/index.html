@@ -7,20 +7,56 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-    <div class="container">
 
-        <h1>MedIntel AI</h1>
+<header>
 
-        <h2>Understand Your Medical Reports with AI</h2>
+    <nav class="navbar">
 
-        <p>
-            Upload your medical reports and receive simple, AI-powered explanations
-            that help you understand your health better.
-        </p>
+        <div class="logo">
+            🩺 MedIntel AI
+        </div>
 
-        <button>Upload Medical Report</button>
+        <ul class="nav-links">
 
-    </div>
+            <li><a href="#">Features</a></li>
+
+            <li><a href="#">How It Works</a></li>
+
+            <li><a href="#">About</a></li>
+
+        </ul>
+
+        <button class="nav-btn">
+            Upload Report
+        </button>
+
+    </nav>
+
+</header>
+
+    <main>
+
+        <section class="hero">
+
+            <h1>
+                Understand Medical Reports
+                Without Medical Jargon.
+            </h1>
+
+            <p>
+                Upload your medical reports
+                to receive simple AI-powered explanations.
+            </p>
+
+            <button id="upload-btn">
+                Upload Report
+            </button>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
