@@ -11,6 +11,37 @@ body{
     background:#F8FAFC;
 }
 
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:34px;
+    font-weight:800;
+    color:#2563EB;
+}
+
+.logo-icon{
+
+    width:52px;
+    height:52px;
+    background:#2563EB;
+    color:white;
+    border-radius:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:800
+}
+
+.logo span{
+
+    font-size:34px;
+    letter-spacing:-1px;
+    font-weight:800;
+}
+
 .navbar{
 
     display:flex;
@@ -19,13 +50,6 @@ body{
     padding:20px 8%;
     background:white;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
-
-.logo{
-
-    font-size:28px;
-    font-weight:bold;
-    color:#2563EB;
 }
 
 .nav-links{
@@ -158,23 +182,40 @@ body{
 
 .features{
 
-    padding:100px 10%;
+    padding:120px 10%;
     text-align:center;
+}
+
+.features h2{
+
+    font-size:42px;
+    font-weight:800;
+    color:#0F172A;
+    margin-bottom:20px;
+}
+
+.features > p{
+
+    font-size:20px;
+    color:#64748B;
+    max-width:700px;
+    margin:0 auto;
+    line-height:1.8;
 }
 
 .feature-grid{
 
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:30px;
-    margin-top:60px;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+    margin-top:70px;
 }
 
 .feature-card{
 
     background:white;
-    padding:40px 30px;
-    border-radius:20px;
+    padding:50px 35px;
+    border-radius:22px;
     box-shadow:0 8px 25px rgba(0,0,0,.08);
     transition:.35s ease;
 }
@@ -183,6 +224,27 @@ body{
 
     transform:translateY(-12px);
     box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.feature-icon{
+
+    font-size:54px;
+    margin-bottom:25px;
+}
+
+.feature-card h3{
+
+    font-size:26px;
+    color:#0F172A;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.feature-card p{
+
+    color:#64748B;
+    line-height:1.8;
+    font-size:17px;
 }
 
 .how-it-works{
@@ -227,6 +289,21 @@ body{
 
     transform:translateY(-12px);
     box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.step-number{
+
+    width:70px;
+    height:70px;
+    background:#2563EB;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+    margin:0 auto 25px;
 }
 
 .step-card h3{
