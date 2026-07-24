@@ -28,3 +28,9 @@
 - Authentication
 - Report history
 - Deployment
+
+## 💙 About
+
+MedIntel AI is my flagship portfolio project, focused on simplifying medical report interpretation through AI-powered analysis and an intuitive user experience.
+
+The goal is to help users understand their medical reports in plain English while showcasing modern full-stack development, AI integration, and product-focused design.
