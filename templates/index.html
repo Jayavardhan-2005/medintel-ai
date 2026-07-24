@@ -9,7 +9,7 @@
     <title>MedIntel AI</title>
 
     <link rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}">
+          href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </head>
@@ -17,33 +17,30 @@
 <body>
 
     <header>
+        
 
         <nav class="navbar">
 
-           <div class="logo">
+            <div class="logo">
 
                 <div class="logo-icon">
-
                     M
                 </div>
 
                 <span>
-
-                MedIntel AI
+                    MedIntel AI
                 </span>
+
             </div>
 
-        
-        <ul class="nav-links">
+            <ul class="nav-links">
 
                 <li><a href="#">Features</a></li>
-
                 <li><a href="#">How It Works</a></li>
-
                 <li><a href="#">About</a></li>
 
             </ul>
-
+            
             <button class="nav-btn">
                 Upload Report
             </button>
@@ -54,156 +51,391 @@
 
     <main>
 
-        <section class="hero">
+      <section class="hero">
 
-            <div class="hero-left">
+    <div class="hero-left">
 
-                <h1>
-                    Understand Medical Reports
-                </h1>
+        <div class="hero-badge">
 
-                <p>
-                    Upload your blood tests, CBC,
-                    Thyroid, MRI, CT Scan and
-                    other reports to receive
-                    AI-powered explanations
-                    in seconds.
-                </p>
+            <span>✨</span>
 
-                <div class="hero-buttons">
+            <p>
+                Medical Reports Made Easy
+            </p>
 
-                    <button class="primary-btn">
-                        Upload Report
-                    </button>
+        </div>
 
-                    <button class="secondary-btn">
-                        Learn More
-                    </button>
+        <h1>
+
+            Understand <br>
+
+            What Your Reports <br>
+
+            <span>Actually Mean.</span>
+
+        </h1>
+
+        <p>
+
+            Upload your medical reports and receive clear,
+            AI-powered explanations in plain English.
+            Understand abnormal values, discover important
+            health insights, and feel more confident before
+            your next doctor's visit.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-btn">
+
+                Upload Report
+
+            </button>
+
+            <button class="secondary-btn">
+
+                Learn More
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-right">
+
+        <div class="report-wrapper">
+
+            <div class="report-card">
+
+                <div class="report-header">
+
+                    <h3>
+
+                        Complete Report Analysis
+
+                    </h3>
+
+                    <div class="analysis-status">
+
+                        <span class="status-dot"></span>
+
+                        <p>
+
+                            AI Analysis Complete
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="report-table-header">
+
+                    <span>Test Name</span>
+
+                    <span>Result</span>
+
+                    <span>Status</span>
+
+                </div>
+
+
+
+                <div class="report-row">
+
+                    <span>Hemoglobin</span>
+
+                    <span>13.8 g/dL</span>
+
+                    <span class="status normal">
+
+                        Normal
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="report-row">
+
+                    <span>WBC</span>
+
+                    <span>11.2 K/uL</span>
+
+                    <span class="status high">
+
+                        High
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="report-row">
+
+                    <span>Vitamin D</span>
+
+                    <span>14 ng/mL</span>
+
+                    <span class="status low">
+
+                        Low
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="report-row">
+
+                    <span>LDL Cholesterol</span>
+
+                    <span>142 mg/dL</span>
+
+                    <span class="status high">
+
+                        High
+
+                    </span>
 
                 </div>
 
             </div>
 
-            <div class="hero-right">
 
-                <img
-                    src="https://placehold.co/500x500"
-                    alt="Medical AI Illustration">
+
+            <!-- Floating AI Chips -->
+
+            <div class="floating-chip chip-top">
+
+                <span>⚠</span>
+
+                <p>High LDL</p>
+
+            </div>
+
+
+
+            <div class="floating-chip chip-left">
+
+                <span>☀</span>
+
+                <p>Vitamin D Low</p>
+
+            </div>
+
+
+
+            <div class="floating-chip chip-bottom">
+
+                <span>👨‍⚕️</span>
+
+                <p>See Doctor</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <section class="how-it-works">
+
+            <h2>How MedIntel AI Works</h2>
+
+            <p>
+                Get clear medical insights in just three simple steps.
+            </p>
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <h3>Upload Report</h3>
+
+                    <p>
+                        Upload your blood report or medical document securely.
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <h3>AI Analysis</h3>
+
+                    <p>
+                        Our AI analyzes your report and identifies important findings.
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <h3>Understand Results</h3>
+
+                    <p>
+                        Receive easy-to-understand explanations and helpful insights.
+                    </p>
+
+                </div>
 
             </div>
 
         </section>
-        <section class="how-it-works">
+        
 
-    <h2>How MedIntel AI Works</h2>
+        <section class="features">
 
-    <p>
-        Get clear medical insights in just three simple steps.
-    </p>
-
-    <div class="steps-grid">
-
-        <div class="step-card">
-
-            <div class="step-number">
-                1
-            </div>
-
-            <h3>Upload Report</h3>
+            <h2>Why Choose MedIntel AI?</h2>
 
             <p>
-                Upload your blood report or medical document securely.
+                Built to simplify complex medical reports while keeping your health data secure,
+                private and easy to understand.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🧠
+                    </div>
+
+                    <h3>AI Analysis</h3>
+
+                    <p>
+                        Instantly understand medical reports in simple language.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📊
+                    </div>
+
+                    <h3>Health Tracking</h3>
+
+                    <p>
+                        Compare reports over time and monitor your health progress.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🔒
+                    </div>
+
+                    <h3>Privacy First</h3>
+
+                    <p>
+                        Your medical reports stay secure, encrypted and confidential.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+        <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+
+                <div class="footer-logo-icon">
+
+                    🩺
+
+                </div>
+
+                <h2>MedIntel AI</h2>
+
+            </div>
+
+            <p>
+
+                Making medical reports understandable with AI-powered insights,
+                helping you understand your health with confidence.
+
             </p>
 
         </div>
 
-        <div class="step-card">
+        <div class="footer-links">
 
-            <div class="step-number">
-                2
-            </div>
+            <h3>Product</h3>
 
-            <h3>AI Analysis</h3>
+            <a href="#">Features</a>
 
-            <p>
-                Our AI analyzes your report and identifies important findings.
-            </p>
+            <a href="#">How It Works</a>
+
+            <a href="#">Upload Report</a>
 
         </div>
 
-        <div class="step-card">
+        <div class="footer-links">
 
-            <div class="step-number">
-                3
-            </div>
+            <h3>Resources</h3>
 
-            <h3>Understand Results</h3>
+            <a href="#">Privacy Policy</a>
 
-            <p>
-                Receive easy-to-understand explanations and helpful insights.
-            </p>
+            <a href="#">Terms of Service</a>
+
+            <a href="#">FAQ</a>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Company</h3>
+
+            <a href="#">GitHub</a>
+
+            <a href="#">Email</a>
 
         </div>
 
     </div>
 
-</section>
-<section class="features">
+    <div class="footer-bottom">
 
-    <h2>Why Choose MedIntel AI?</h2>
+        <p>
 
-    <p>
-        Built to simplify complex medical reports while keeping your health data secure, private and easy to understand.
-    </p>
+            © 2026 MedIntel AI. All rights reserved.
 
-    <div class="feature-grid">
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-                🧠
-            </div>
-
-            <h3>AI Analysis</h3>
-
-            <p>
-                Instantly understand medical reports in simple language.
-            </p>
-
-        </div>
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-                📊
-            </div>
-
-            <h3>Health Tracking</h3>
-
-            <p>
-                Compare reports over time and monitor your health progress.
-            </p>
-
-        </div>
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-                🔒
-            </div>
-
-            <h3>Privacy First</h3>
-
-            <p>
-                Your medical reports stay secure, encrypted and confidential.
-            </p>
-
-        </div>
+        </p>
 
     </div>
 
-</section>
-
+</footer>
     </main>
 
 </body>

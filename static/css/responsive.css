@@ -1,0 +1,82 @@
+/* ---------- Laptop ---------- */
+
+@media(max-width:1100px){
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:80px;
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+    }
+
+    .hero-left{
+
+        max-width:100%;
+    }
+
+    .hero-right{
+
+        justify-content:center;
+    }
+
+    .feature-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .steps-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .report-wrapper{
+
+        transform:scale(.9);
+    }
+}
+
+
+
+/* ---------- Tablet ---------- */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    .nav-links{
+
+        gap:20px;
+    }
+
+    .hero{
+
+        padding:80px 7%;
+    }
+
+    .hero-left h1{
+
+        font-size:46px;
+    }
+
+    .hero-left p{
+
+        font-size:18px;
+    }
+
+    .report-wrapper{
+
+        transform:scale(.72);
+    }
+}

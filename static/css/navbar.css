@@ -1,0 +1,137 @@
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:34px;
+    font-weight:800;
+    color:#2563EB;
+}
+
+.logo-icon{
+
+    width:52px;
+    height:52px;
+    background:#2563EB;
+    color:white;
+    border-radius:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:800;
+}
+
+.logo span{
+
+    font-size:34px;
+    letter-spacing:-1px;
+    font-weight:800;
+}
+
+.navbar
+{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition:
+        background 0.35s ease,
+        padding 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+    z-index: 1000;
+    opacity: 0;
+    animation: navbarFade 0.8s ease forwards;
+
+}
+
+.navbar.scrolled
+{
+
+    padding: 16px 8%;
+    background: rgba(255, 255, 255, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+
+}
+
+.navbar::after
+{
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+
+}
+
+@keyframes navbarFade
+{
+
+    from
+    {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.nav-links{
+
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+    color:#334155;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.nav-links a:hover{
+
+    color:#2563EB;
+}
+
+.nav-btn{
+
+    background:#2563EB;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.nav-btn:hover{
+
+    background:#1D4ED8;
+    transform:translateY(-2px);
+}
