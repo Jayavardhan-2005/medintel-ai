@@ -1,0 +1,137 @@
+.upload-section
+{
+
+    padding: 120px 10%;
+    background: #f8fbff;
+
+}
+
+.upload-container
+{
+
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.upload-header
+{
+
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+
+.upload-header h2
+{
+
+    font-size: 48px;
+    color: #0f172a;
+    margin-bottom: 20px;
+
+}
+
+.upload-header p
+{
+
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #64748b;
+
+}
+
+.upload-card
+{
+
+    max-width: 850px;
+    margin: auto;
+    padding: 70px 50px;
+    background: white;
+    border: 2px dashed #8fd8ff;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: .35s ease;
+
+}
+
+.upload-card:hover
+{
+
+    transform: translateY(-6px);
+    border-color: #06b6d4;
+    box-shadow: 0 20px 45px rgba(14, 165, 233, .12);
+
+}
+
+.upload-icon
+{
+
+    font-size: 65px;
+    margin-bottom: 25px;
+
+}
+
+.upload-card h3
+{
+
+    font-size: 30px;
+    color: #0f172a;
+    margin-bottom: 20px;
+
+}
+
+.upload-card span
+{
+
+    display: block;
+    margin: 15px 0;
+    font-weight: 600;
+    color: #94a3b8;
+
+}
+
+.upload-card p
+{
+
+    font-size: 18px;
+    color: #475569;
+    margin-bottom: 35px;
+
+}
+
+.upload-info
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 15px;
+    color: #94a3b8;
+
+}
+.analyze-btn
+{
+
+    margin-top: 30px;
+    padding: 14px 34px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.analyze-btn:hover
+{
+
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}

@@ -10,7 +10,6 @@
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </head>
 
@@ -51,7 +50,9 @@
 
     <main>
 
-      <section class="hero">
+
+
+    <section class="hero">
 
     <div class="hero-left">
 
@@ -213,7 +214,6 @@
 
 
 
-            <!-- Floating AI Chips -->
 
             <div class="floating-chip chip-top">
 
@@ -249,7 +249,73 @@
 
 </section>
 
-        <section class="how-it-works">
+
+
+
+<section class="upload-section">
+
+    <div class="upload-container">
+
+        <div class="upload-header">
+
+            <h2>Upload Your Medical Report</h2>
+
+            <p>
+                Upload your medical report and receive AI-powered explanations
+                in plain English within seconds.
+            </p>
+
+        </div>
+
+       <div class="upload-card" id="upload-card">
+
+    <div class="upload-icon" id="upload-icon">
+        ☁️
+    </div>
+
+    <h3 id="upload-title">
+        Drag & Drop Your Report
+    </h3>
+
+    <span id="upload-divider">
+        OR
+    </span>
+
+    <p id="upload-subtitle">
+
+        Click Anywhere to Browse
+
+    </p>
+
+    <div class="upload-info" id="upload-info">
+
+        <span>PDF Only</span>
+        <span>•</span>
+        <span>Max 10 MB</span>
+        <span>•</span>
+        <span>Secure Upload</span>
+
+    </div>
+
+    <input
+        type="file"
+        id="report-upload"
+        accept=".pdf"
+        hidden
+        >
+        <button id="analyze-btn" class="analyze-btn" hidden>
+            Analyze Report
+        </button>
+        
+</div>
+
+    </div>
+
+</section>
+
+
+
+<section class="how-it-works">
 
             <h2>How MedIntel AI Works</h2>
 
@@ -303,10 +369,11 @@
 
             </div>
 
-        </section>
-        
+</section>
 
-        <section class="features">
+
+
+<section class="features">
 
             <h2>Why Choose MedIntel AI?</h2>
 
@@ -361,8 +428,11 @@
 
             </div>
 
-        </section>
-        <footer class="footer">
+</section>
+
+
+
+<footer class="footer">
 
     <div class="footer-container">
 
@@ -436,8 +506,9 @@
     </div>
 
 </footer>
-    </main>
 
+</main>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>
