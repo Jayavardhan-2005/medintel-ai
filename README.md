@@ -1,3 +1,20 @@
+## 💙 About
+
+MedIntel AI is my flagship portfolio project focused on simplifying medical
+report interpretation through automated document processing, OCR, structured
+medical parameter extraction, and an intuitive user experience.
+
+The goal is to help users understand their medical reports in plain English
+while exploring full-stack development, document processing, OCR, AI
+integration, and product-focused design.
+
+> **Disclaimer:** MedIntel AI is an educational and informational project.
+> It is not intended to replace professional medical advice, diagnosis, or
+> treatment. Users should consult a qualified healthcare professional for
+> medical decisions.
+
+
+
 ## 🚧 Current Progress
 
 ### ✅ Completed
