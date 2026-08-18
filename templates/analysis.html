@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Medical Report Analysis</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/analysis.css') }}">
+
+</head>
+
+<body>
+
+<div class="analysis-container">
+
+    <h1>Medical Report Analysis</h1>
+
+    <div class="summary-section">
+
+        <h2>Report Summary</h2>
+
+        <div class="summary-grid">
+
+            <div class="summary-card normal">
+
+                <span class="summary-icon">✓</span>
+
+                <div>
+                    <h3>{{ normal }}</h3>
+                    <p>Normal</p>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card high">
+
+                <span class="summary-icon">↑</span>
+
+                <div>
+                    <h3>{{ high }}</h3>
+                    <p>High</p>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card low">
+
+                <span class="summary-icon">↓</span>
+
+                <div>
+                    <h3>{{ low }}</h3>
+                    <p>Low</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="results">
+
+        {% for item in report %}
+
+        <div class="result-card {{ item.status|lower }}">
+
+            <div class="card-header">
+
+                <h2>{{ item.test }}</h2>
+
+                <span class="status-badge {{ item.status|lower }}">
+                    {{ item.status }}
+                </span>
+
+            </div>
+
+            <p class="value">
+                {{ item.value }} {{ item.unit }}
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

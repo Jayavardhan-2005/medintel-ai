@@ -34,13 +34,13 @@
 
             <ul class="nav-links">
 
-                <li><a href="#">Features</a></li>
-                <li><a href="#">How It Works</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About</a></li>
 
             </ul>
             
-            <button class="nav-btn">
+            <button class="nav-btn" id="nav-upload-btn">
                 Upload Report
             </button>
 
@@ -52,7 +52,7 @@
 
 
 
-    <section class="hero">
+<section class="hero" id="home">
 
     <div class="hero-left">
 
@@ -88,16 +88,15 @@
 
         <div class="hero-buttons">
 
-            <button class="primary-btn">
+            <button class="primary-btn" id="hero-upload-btn">
 
                 Upload Report
 
             </button>
 
-            <button class="secondary-btn">
-
+            <button id="learn-more-btn"
+                    class = "secondary-btn">
                 Learn More
-
             </button>
 
         </div>
@@ -252,7 +251,7 @@
 
 
 
-<section class="upload-section">
+<section class="upload-section" id="upload-section">
 
     <div class="upload-container">
 
@@ -264,58 +263,64 @@
                 Upload your medical report and receive AI-powered explanations
                 in plain English within seconds.
             </p>
-
         </div>
 
-       <div class="upload-card" id="upload-card">
-
-    <div class="upload-icon" id="upload-icon">
-        ☁️
-    </div>
-
-    <h3 id="upload-title">
-        Drag & Drop Your Report
-    </h3>
-
-    <span id="upload-divider">
-        OR
-    </span>
-
-    <p id="upload-subtitle">
-
-        Click Anywhere to Browse
-
-    </p>
-
-    <div class="upload-info" id="upload-info">
-
-        <span>PDF Only</span>
-        <span>•</span>
-        <span>Max 10 MB</span>
-        <span>•</span>
-        <span>Secure Upload</span>
-
-    </div>
-
-    <input
-        type="file"
-        id="report-upload"
-        accept=".pdf"
-        hidden
+        <form
+            class="upload-card"
+            id="upload-card"
+            action="/upload"
+            method="POST"
+            enctype="multipart/form-data"
         >
-        <button id="analyze-btn" class="analyze-btn" hidden>
-            Analyze Report
-        </button>
-        
-</div>
 
+            <div class="upload-icon" id="upload-icon">
+                ☁️
+            </div>
+
+            <h3 id="upload-title">
+                Drag & Drop Your Report
+            </h3>
+
+            <span id="upload-divider">
+                OR
+            </span>
+
+            <p id="upload-subtitle">
+                Click Anywhere to Browse
+            </p>
+
+            <div class="upload-info">
+
+                <span>PDF Only</span>
+                <span>•</span>
+                <span>Max 10 MB</span>
+                <span>•</span>
+                <span>Secure Upload</span>
+
+            </div>
+
+            <input
+                type="file"
+                id="report-upload"
+                name="report"
+                accept=".pdf"
+                hidden
+            >
+            <button
+                id="analyze-btn"
+                class="analyze-btn"
+                type="submit"
+                hidden
+            >
+                Analyze Report
+            </button>
+        </form>
     </div>
-
 </section>
 
 
 
-<section class="how-it-works">
+<section id="how-it-works" class="how-it-works">
 
             <h2>How MedIntel AI Works</h2>
 
@@ -373,7 +378,7 @@
 
 
 
-<section class="features">
+<section id="features" class="features">
 
             <h2>Why Choose MedIntel AI?</h2>
 
@@ -432,7 +437,7 @@
 
 
 
-<footer class="footer">
+<section id="about" class="footer">
 
     <div class="footer-container">
 
@@ -463,11 +468,11 @@
 
             <h3>Product</h3>
 
-            <a href="#">Features</a>
+            <a href="#features">Features</a>
 
-            <a href="#">How It Works</a>
+            <a href="#how-it-works">How It Works</a>
 
-            <a href="#">Upload Report</a>
+            <a href="#upload-section">Upload Report</a>
 
         </div>
 
@@ -505,7 +510,7 @@
 
     </div>
 
-</footer>
+</section>
 
 </main>
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
