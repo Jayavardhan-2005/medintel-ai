@@ -14,13 +14,11 @@
           href="{{ url_for('static', filename='css/analysis.css') }}">
 
 </head>
-
 <body>
 
 <div class="analysis-container">
 
     <h1>Medical Report Analysis</h1>
-
     <div class="summary-section">
 
         <h2>Report Summary</h2>
@@ -66,12 +64,19 @@
 
     </div>
 
-
     <div class="results">
 
         {% for item in report %}
 
-        <div class="result-card {{ item.status|lower }}">
+        <div
+            class="result-card {{ item.status|lower }}"
+            tabindex="0"
+            role="button"
+            data-test="{{ item.test }}"
+            data-value="{{ item.value }}"
+            data-unit="{{ item.unit }}"
+            data-status="{{ item.status }}"
+        >
 
             <div class="card-header">
 
@@ -83,8 +88,14 @@
 
             </div>
 
+
             <p class="value">
                 {{ item.value }} {{ item.unit }}
+            </p>
+
+
+            <p class="view-details">
+                View details →
             </p>
 
         </div>
@@ -92,9 +103,146 @@
         {% endfor %}
 
     </div>
+    <div
+        id="parameter-modal"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-overlay"
+            data-close-modal
+        ></div>
+
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+        >
+
+            <button
+                type="button"
+                class="modal-close"
+                id="modal-close"
+                aria-label="Close details"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-header">
+
+                <h2 id="modal-title">
+                    Parameter
+                </h2>
+
+                <span
+                    id="modal-status"
+                    class="status-badge"
+                >
+                    Status
+                </span>
+
+            </div>
+
+
+            <div class="modal-value">
+
+                <span id="modal-value">
+                    —
+                </span>
+
+                <span id="modal-unit">
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="modal-section">
+
+                <h3>What is it?</h3>
+
+                <p id="modal-description">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="modal-section">
+
+                <h3>Reference Range</h3>
+
+                <p id="modal-range">
+                    Not available
+                </p>
+
+            </div>
+
+
+            <div class="modal-section">
+
+                <h3>Why can it be low?</h3>
+
+                <ul id="modal-low">
+                    <li>Loading...</li>
+                </ul>
+
+            </div>
+
+
+            <div class="modal-section">
+
+                <h3>Why can it be high?</h3>
+
+                <ul id="modal-high">
+                    <li>Loading...</li>
+                </ul>
+
+            </div>
+
+
+            <div class="modal-section">
+
+                <h3>Why is it tested?</h3>
+
+                <p id="modal-why-tested">
+                    Loading...
+                </p>
+
+            </div>
+
+            <div class="modal-section ai-section">
+
+                <h3>AI Explanation</h3>
+
+                <div id="ai-explanation">
+
+                    <p>
+                        Click a parameter to view its explanation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p class="medical-disclaimer">
+
+                This information is for educational purposes only
+                and is not a substitute for professional medical advice.
+
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
-
+<script src="{{ url_for('static', filename='js/analysis.js') }}"></script>
 </body>
 
 </html>

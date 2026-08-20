@@ -1,8 +1,16 @@
-from flask import Flask, render_template, request , jsonify
+from flask import Flask, render_template, request , jsonify 
 import os
 import pdfplumber,pymupdf
 import re
+from med_base import get_parameter_info
+from dotenv import load_dotenv
+from google import genai
 
+load_dotenv()
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+gemini_client = None
+if GEMINI_API_KEY:
+    gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
@@ -462,6 +470,129 @@ def upload():
         borderline=borderline_count
     )
 
+@app.route("/explain", methods=["POST"])
+def explain():
+    data = request.get_json()
+
+    test = data.get("test")
+    value = data.get("value")
+    unit = data.get("unit")
+    status = data.get("status")
+
+    # Get information from our medical knowledge base
+    knowledge = get_parameter_info(test)
+
+    # Default fallback explanation
+    ai_explanation = knowledge.get(
+        "guidance",
+        "This result should be interpreted alongside other laboratory results, symptoms, and clinical history."
+    )
+
+    # Try Gemini if the API is configured
+    if gemini_client:
+        try:
+            prompt = f"""
+You are an educational medical report explanation assistant.
+
+Your job is to explain a laboratory result to a person with no medical background.
+
+Laboratory result:
+Test: {test}
+Result: {value} {unit}
+Status: {status}
+
+Medical knowledge available:
+Description: {knowledge.get("description", "")}
+
+Possible reasons for a LOW result:
+{", ".join(knowledge.get("low", []))}
+
+Possible reasons for a HIGH result:
+{", ".join(knowledge.get("high", []))}
+
+Why this test is performed:
+{knowledge.get("why_tested", "")}
+
+Write a short, clear explanation of this specific result.
+
+Follow these rules:
+
+1. Start with the exact heading:
+What is it?
+
+Then briefly explain what the test measures.
+
+2. Then use the exact heading:
+What does this result mean?
+
+Explain what the supplied result ({value} {unit}) and status ({status}) mean in simple language.
+
+3. If the result is HIGH, use the exact heading:
+Why might it be high?
+
+Mention only the most relevant possible causes from the provided medical knowledge.
+
+4. If the result is LOW, use the exact heading:
+Why might it be low?
+
+Mention only the most relevant possible causes from the provided medical knowledge.
+
+5. If the result is NORMAL, do not list causes of abnormal results. Instead briefly explain what the normal status generally means.
+
+6. Use the exact heading:
+Important note
+
+Explain that a laboratory result alone does not establish a diagnosis and should be interpreted together with symptoms, medical history, other test results, and the laboratory's reference range by a healthcare professional.
+
+7. Do not diagnose the patient.
+
+8. Do not recommend specific medicines, supplements, dosages, or treatments.
+
+9. Do not tell the user to start, stop, or change any medication.
+
+10. Keep the explanation concise and easy to understand.
+
+11. Use plain text only.
+
+12. Do NOT use Markdown.
+
+13. Do NOT use asterisks, bullet points, numbered lists, emojis, or special formatting.
+
+14. Do not invent reference ranges or medical facts that are not provided above.
+
+Return only the explanation.
+"""
+
+            response = gemini_client.models.generate_content(
+                model="gemini-3.6-flash",
+                contents=prompt
+            )
+
+            if response.text:
+                ai_explanation = response.text
+
+        except Exception as e:
+            print(f"Gemini explanation failed: {e}")
+
+    return jsonify({
+        "knowledge": knowledge,
+        "ai_explanation": ai_explanation,
+        "test": test,
+        "value": value,
+        "unit": unit,
+        "status": status
+    })
+
+@app.route("/test-knowledge/<test_name>")
+def test_knowledge(test_name):
+
+    info = get_parameter_info(test_name)
+    if not info:
+        return jsonify({
+            "error": "Parameter not found"
+        }), 404
+
+    return jsonify(info)
 
 if __name__ == "__main__":
     app.run(debug=True)

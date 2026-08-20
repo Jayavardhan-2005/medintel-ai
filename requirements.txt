@@ -1,0 +1,6 @@
+Flask
+pdfplumber
+PyMuPDF
+pytesseract
+google-genai
+python-dotenv
