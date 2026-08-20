@@ -40,19 +40,27 @@ integration, and product-focused design.
 - Dynamic medical result cards
 - Report summary dashboard
 - Support for different PDF report layouts
+- Medical parameter knowledge base
+- Parameter descriptions and reference range information
+- Possible causes for high and low results
+- Explanation of why individual tests are performed
+- Interactive medical parameter information modal
+- AI-powered medical report explanations using Google Gemini
+- Gemini API integration with secure environment variable configuration
+- AI explanations based on test name, result value, unit, status, and medical knowledge
+- Educational and non-diagnostic AI explanation safeguards
+- Fallback explanations when AI services are unavailable
 
 ### 🚀 In Progress
 
-- Medical parameter explanations
-- Reference range interpretation
 - Overall report summary
 - Medical recommendations and next-step guidance
 - Improved error handling
 - Additional report format support
+- Refinement of AI-generated explanations
 
 ### ⏳ Planned
 
-- AI-powered medical report explanations
 - Health history and report tracking
 - Report comparison over time
 - User authentication
